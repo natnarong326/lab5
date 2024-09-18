@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลส่วนบุคคล</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ข้อมูลส่วนบุคคล</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="class_details.html">รายละเอียดรุ่น</a></li>
+                <li><a href="personal_info.html">ข้อมูลส่วนบุคคล</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="personal-info">
+            <h2>ข้อมูลส่วนบุคคล</h2>
+            <img src="https://th.bing.com/th/id/OIP.ZvQQWTcYO_8Keh70LRjUIAHaHa?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="รูปโปรไฟล์" class="profile-image">
+            <p><strong>ชื่อ:xxxx</strong> <span id="name"></span></p>
+            <p><strong>ชื่อ:</strong> <span id="class-year"></span></p>
+            <p><strong>อีเมล:abcdefg@gmail.com</strong> <span id="email"></span></p>
+            <p><strong>เบอร์โทรศัพท์:071-142-6831</strong> <span id="phone"></span></p>
+        </section>
+
+    </main>
+    <footer>
+    </footer>
+    <script>
+        // สคริปต์สำหรับแสดงข้อมูลจริงตามรุ่นที่เลือก
+        const urlParams = new URLSearchParams(window.location.search);
+        const classYear = urlParams.get('class');
+        document.getElementById('class-year').textContent = classYear;
+        // เพิ่มโค้ดสำหรับดึงข้อมูลจริงตามรุ่นที่เลือก
+    </script>
+</body>
+</html>
